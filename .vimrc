@@ -17,7 +17,7 @@ set guioptions-=T
 set guioptions-=m
 set mouse=
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [POS=%04l,%04v]\ [LEN=%L]
-set guifont=Courier\14
+set guifont=Courier\10
 set wildmenu
 set number
 
