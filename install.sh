@@ -20,11 +20,12 @@ echo "⬜⬜                    ⬜⬜"
 echo "⬜⬜                    ⬜⬜"
 echo "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜"
 
+echo "*** Start installation ***"
 echo "[LOG] installation .vimrc"
 
 VIMDIR="${HOME}/.vim"
 VIMRCDIR="${HOME}/.vimrc"
-VIMPLUGINS="${VIMDIR}/plugin"
+VIMPLUGINS="${VIMDIR}/plugged"
 
 if [ -e $VIMRCDIR ]; then
   echo "[LOG] ${VIMRCDIR} already exists, need re-install"
@@ -34,7 +35,7 @@ fi
 
 if [ ! -d $VIMDIR ]; then
   mkdir $VIMDIR
-  echo "[LOG] .vim directory not exist, but i created it!\ncreated in ${VIMDIR}"
+  echo "[LOG] .vim directory not exist, but i create it in ${VIMDIR}"
 else
   echo "[LOG] plugins dir removed"
   echo "[LOG] ${VIMDIR} already exists, clear plugins now"
@@ -47,7 +48,8 @@ echo "[LOG] .vimrc successfully installed in ${VIMRCDIR}"
 mkdir $VIMPLUGINS
 echo "[LOG] ${VIMPLUGINS} is created now"
 
-cp -r plugin/ $VIMPLUGINS
+cp -r plugged $VIMPLUGINS
 echo "[LOG] plugins successfully installed"
 
-echo "[LOG] nstallation successfully ended!"
+echo "[LOG] installation successfully ended!"
+echo "*** Put: vi for opening vim ***"
