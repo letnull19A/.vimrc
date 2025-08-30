@@ -34,6 +34,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 source ./plugged/plug.vim
 call plug#begin()
 
+Plug 'sainnhe/everforest'
+Plug 'https://github.com/sheerun/vim-polyglot'
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter'
 Plug 'tpope/vim-sensible'
 
 call plug#end()
