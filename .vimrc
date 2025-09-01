@@ -13,6 +13,16 @@ for prefix in ['i', 'n', 'v']
   endfor
 endfor
 
+if has('termguicolors')
+  set termguicolors
+endif
+set background=dark
+
+let g:everforest_background = 'soft'
+let g:everforest_better_performance = 1
+
+colorscheme everforest
+
 set guioptions-=T
 set guioptions-=m
 set mouse=
@@ -31,8 +41,7 @@ map <silent> <S-F8> :sp +Explore<CR>
 
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
-source ./plugged/plug.vim
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 
 Plug 'sainnhe/everforest'
 Plug 'https://github.com/sheerun/vim-polyglot'
